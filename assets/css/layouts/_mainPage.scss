@@ -1,0 +1,80 @@
+/* _mainPage.scss */
+
+#secTodo {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / .2);
+}
+
+#headTodoList {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+#todoInput {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .25rem;
+    padding: 1rem;
+    border-block: 1px solid rgb(0 0 0 / .1);
+}
+
+#txtTodoInput {
+    padding: .25rem;
+    border: 0;
+    outline: 1ps solid rgb(0 0 0 / .1);
+}
+
+#btnEnter {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem;
+    border: 0;
+    background-color: black;
+    color: white;
+}
+
+.todo-placeholder {
+    padding: 1rem;
+    color: rgb(0 0 0 / .5);
+
+    &.hide {
+        display: none;
+    }
+}
+
+.todo-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+
+    > p {
+        font-weight: 700;
+    }
+
+    > button {
+        margin-inline-start: auto;
+        padding: .5rem;
+        border: 0;
+        background-color: crimson;
+        color: white;
+    }
+
+    &.done {
+        p {
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+    }
+}
+
+/* _mainPage.scss */
