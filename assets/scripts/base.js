@@ -89,3 +89,19 @@ btnClear.addEventListener('click', () => {
     localStorage.clear();
     txtStore.value = '';
 })
+
+
+
+// 예외처리
+
+function exceptionTest() {
+    try {
+        alert('something');
+
+        // throw '예외 강제 발생'; // throw 는 try - catch 과정의 내부에 있지 않아도 사용할 수 있다.
+    } catch(exception) {
+        alert(exception);
+
+        return;
+    }
+}
