@@ -505,6 +505,7 @@ a:hover, a:focus, a:active {
   border: 0;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 .todo-placeholder {
@@ -522,6 +523,9 @@ a:hover, a:focus, a:active {
   gap: 0.5rem;
   padding: 1rem;
 }
+.todo-item > input {
+  cursor: pointer;
+}
 .todo-item > p {
   font-weight: 700;
 }
@@ -531,10 +535,17 @@ a:hover, a:focus, a:active {
   border: 0;
   background-color: crimson;
   color: white;
+  cursor: pointer;
+}
+.todo-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .todo-item.done p {
   font-weight: 400;
   text-decoration: line-through;
+}
+.todo-item + .todo-item {
+  border-block-start: 1px dashed rgba(0, 0, 0, 0.075);
 }
 
 /* _mainPage.scss */

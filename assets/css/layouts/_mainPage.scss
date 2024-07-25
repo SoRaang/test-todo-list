@@ -39,6 +39,7 @@
     border: 0;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .todo-placeholder {
@@ -57,6 +58,10 @@
     gap: .5rem;
     padding: 1rem;
 
+    > input {
+        cursor: pointer;
+    }
+
     > p {
         font-weight: 700;
     }
@@ -67,6 +72,11 @@
         border: 0;
         background-color: crimson;
         color: white;
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: rgb(0 0 0 / .05);
     }
 
     &.done {
@@ -74,6 +84,11 @@
             font-weight: 400;
             text-decoration: line-through;
         }
+    }
+
+    & + & {
+        border-block-start: 1px dashed rgb(0 0 0 / .075);
+
     }
 }
 
