@@ -66,3 +66,26 @@ txtTodoInput.addEventListener('keyup', (e) => {
         addTodo();
     }
 });
+
+
+
+// 로컬 스토리지에 저장
+
+const txtStore = document.getElementById('txtLocalStore');
+const btnClear = document.getElementById('btnClearStore');
+const savedValue = localStorage.getItem('testText');
+
+if (savedValue) {
+    txtStore.value = savedValue;
+}
+
+txtStore.addEventListener('keyup', (e) => {
+    const currentValue = e.currentTarget.value;
+
+    localStorage.setItem('testText', currentValue);
+});
+
+btnClear.addEventListener('click', () => {
+    localStorage.clear();
+    txtStore.value = '';
+})
